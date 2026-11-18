@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1)), url(https://thebiggestcitiesinchina.com/wp-content/uploads/2025/01/Chinese-Megacities-25-1024x681.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #370617;
+}
+
+.logo-image {
+    display: flex;
+    justify-self: center;
+    margin: 50px;
+    width: 50vh;
+    border: solid 5px #161616;
+}
+
+.signin-heading {
+    margin-top: 20px;
+    display: flex;
+    justify-self: center;
+    padding: 10px;
+    font-size: 20px;
+    font-family: "Georgia";
+    border: solid 1px rgb(204, 170, 103);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(23, 26, 33, 0.5);
+}
+
+.signin-items {
+    margin-top: 25px;
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-format {
+    margin-bottom: 25px;
+}
+
+.signin-input {
+    width: 400px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    font-size: 18px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, .3));
+}
+
+.signin-buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.signin-button {
+    width: 40%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, .4));
+    color: white;
+    background-color: #9D0208;
+}
+
+.signin-button:active {
+    background-color: #6A040F;
+}
