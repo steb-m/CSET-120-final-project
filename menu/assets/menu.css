@@ -1,0 +1,29 @@
+ul {
+	margin: 0 auto;
+} li.menu-item {
+	background-size: cover;
+	border: 1px solid #fff;
+	display: inline-block;
+	min-height: 256px;
+	min-width: 256px;
+	margin: 8px;
+	overflow: hidden;
+	padding: 2px;
+	position: relative;
+	transition: scale .333s;
+} li.menu-item:hover {
+	scale: 1.111;
+	transition: scale .333s;
+} li.menu-item:hover > div.menu-desc {
+	bottom: 0;
+	transition: bottom .333s;
+} div.menu-desc {
+	bottom: -16;
+	right: 0;
+	max-height: 128px;
+	position: absolute;
+	text-align: right;
+	transition: bottom .333s;
+} li#chicken-lo-mein {
+	background-image: linear-gradient(#00000000 60%, #000000ef 80%), url("img/chickenLoMein.jpg");
+}
