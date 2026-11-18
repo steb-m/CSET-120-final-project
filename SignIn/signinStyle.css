@@ -13,6 +13,10 @@ body {
     background-color: #370617;
 }
 
+body.manager {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(25, 0, 0)), url(https://thebiggestcitiesinchina.com/wp-content/uploads/2025/01/Chinese-Megacities-25-1024x681.jpg);
+}
+
 .logo-image {
     display: flex;
     justify-self: center;
