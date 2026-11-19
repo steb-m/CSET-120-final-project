@@ -12,48 +12,55 @@ body {
 }
 
 .header {
-	background: linear-gradient(to bottom, #03071E, rgba(3, 7, 30, 0.75), transparent);
-	color: #f0f0f0;
-	font-weight: 200;
-	padding: 20px 0;
-	position: sticky;
-	top: 0;
-	z-index: 100;
-	animation: fadeSlideUp 0.8s ease-out forwards;
-}
-
-@keyframes fadeSlideUp {
+    background: linear-gradient(to bottom, #03071E, transparent);
+    color: #f0f0f0;
+    font-weight: 200;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: fadeSlideDown 0.8s ease-out forwards;
+} 
+@keyframes fadeSlideDown {
 	from {
 		opacity: 0;
 		transform: translateY(-10px);
 	}
 	to {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translateY(0px);
+	}
+}
+
+@keyframes fadeSlideUp {
+	from {
+		opacity: 0;
+		transform: translateY(0px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(-10px);
 	}
 }
 
 .nav-links {
-	list-style: none;
-	display: flex;
-	justify-content: space-around;
-	max-width: 900px;
-	margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
 }
 
 .nav-links li {
-	margin: 0 10px;
+    margin: 0 10px;
 }
 
 .nav-links a {
-	color: #fff;
-	text-decoration: none;
-	position: relative;
-	padding-bottom: 5px;
-	font-family: "Dosis", system-ui, sans-serif;
-	font-size: 1.2rem;
-	letter-spacing: 1px;
-	transition: color 0.3s ease;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    font-family: "Dosis", system-ui;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
@@ -120,6 +127,7 @@ td > div {
 
 .menu-item {
 	cursor: pointer;
+	background-image: linear-gradient(to top, rgba(3, 7, 30, 0.9) 15%, rgba(3, 7, 30, 0.3) 60%), var(--item-image, none);
 	background-size: cover;
 	background-position: center;
 	border: none;
@@ -132,10 +140,15 @@ td > div {
 	position: relative;
 	overflow: hidden;
 	transition: transform 0.33s ease;
+	
 }
 
-.menu-item {
-	background-image: linear-gradient(to top, rgba(3, 7, 30, 0.9) 15%, rgba(3, 7, 30, 0.15) 60%), url("../Images/chickenLoMein.jpg");
+
+#item1 {
+	--item-image: url("../Images/chickenLoMein.jpg");
+}
+#item2 {
+	--item-image: url("../Images/beekAndBorky.png");
 }
 
 .menu-item:hover {
