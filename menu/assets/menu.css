@@ -1,8 +1,7 @@
 @keyframes fadeIn {
 	from { opacity: 0; }
 	to { opacity: 1; }
-}
-menu {
+} menu {
 	display: grid;
 	gap: 1%;
 	grid-template-columns: repeat(3, 1fr);

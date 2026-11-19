@@ -8,9 +8,15 @@
 		},
 		{
 			"title": "Beef Lo Mein",
-			"price": "$6.99",
+			"price": "$9.99",
 			"description": "This is a bowl of beef lo-mein.",
 			"image": "beefLoMein.jpg"
+		},
+		{
+			"title": "Testuo",
+			"price": "$4.20",
+			"description": "This is a test element.",
+			"image": "testuo.jpg"
 		}
 	]
 }
