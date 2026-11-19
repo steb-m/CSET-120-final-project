@@ -204,3 +204,61 @@ td > div {
 		transform: translateY(0);
 	}
 }
+
+/* HIDDEN ITEM DESCRIPTION TOGGLED BY JAVASCRIPT */
+
+.hidden-cust {
+    background-color: beige;
+    height: fit-content;
+    width:256px;
+    border-radius: 15px;
+    position:absolute;
+    top: 25%;
+    left: 30%;
+}
+h3, p {
+    font-family: "Dosis";
+}
+h3 {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+p {
+    margin-top: 15px;
+    text-align: center;
+    color:#03071E;
+    font-family: "Dosis";
+    text-decoration: underline;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    border: none;
+    max-width: 50%;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: burlywood;
+
+}
+.checkboxes {
+    display:flex;
+    flex-direction: column;
+}
+
+/* INNER HTML:
+
+<div class="hidden-cust">
+        <h3>Customize ${itemName}</h3>
+        <div >
+            <p><img class="image" src="Restaurant/Images/india-flag-icon-cropped.png" srcset=""></p>
+        </div>
+        <h3><input type="checkbox" name="${}" id="${}"> cust 1</h3>
+        
+        <div>
+            <button class="buttons" type="button">Add To Cart</button>
+        </div>
+    </div>
+
+*/
