@@ -1,32 +1,39 @@
-ul {
+menu {
 	display: grid;
 	gap: 1%;
 	grid-template-columns: repeat(3, 1fr);
-	margin: 0 1%;
-} li.menu-item {
+	margin: 4px 2%;
+} .menu-item {
+	background-color: unset;
 	background-position: top center;
 	background-size: cover;
 	border: 1px solid #fff;
+	color: inherit;
 	display: inline-block;
 	height: 256px;
-	min-width: 256px;
+	min-width: 384px;
 	overflow: hidden;
-	padding: 2px;
 	position: relative;
 	transition: scale 333.333ms;
-} li.menu-item:hover {
-	scale: 111.111%;
+} .menu-item:hover {
+	cursor: pointer;
+	scale: 106.667%;
 	transition: scale 333.333ms;
-} li.menu-item:hover > div.menu-desc {
+} .menu-item:hover > div.item-info {
 	bottom: 0;
 	transition: bottom 333.333ms;
-} div.menu-desc {
-	bottom: -16;
-	right: 0;
+} .item-info {
+	bottom: -28px;
 	max-height: 128px;
+	right: 0;
+	padding: 4px;
 	position: absolute;
 	text-align: right;
 	transition: bottom 333.333ms;
-} li#chicken-lo-mein {
-	background-image: linear-gradient(#00000000 60%, #000000ef 80%), url("img/chickenLoMein.jpg");
+} .item-title {
+	font-size: 250%;
+} .item-price {
+	font-size: 175%;
+} #chicken-lo-mein {
+	background-image: linear-gradient(#00000000 60%, #000000df 80%), url("img/chickenLoMein.jpg");
 }
