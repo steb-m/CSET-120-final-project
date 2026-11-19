@@ -150,6 +150,30 @@ td > div {
 #item2 {
 	--item-image: url("../Images/beekAndBorky.png");
 }
+#item3 {
+	--item-image: url("../Images/porkDumpling.webp");
+}
+#item4 {
+	--item-image: url("../Images/kungPaoChicken.webp");
+}
+#item5 {
+	--item-image: url("../Images/beefChowFun.webp");
+}
+#item6 {
+	--item-image: url("../Images/charSiuPork.webp");
+}
+#item7 {
+	--item-image: url("../Images/orangeChicken.webp");
+}
+#item8 {
+	--item-image: url("../Images/friedRice.webp");
+}
+#item9 {
+	--item-image: url("../Images/shrimpLoMein.webp");
+}
+#item10 {
+	--item-image: url("../Images/sourSoup.webp")
+}
 
 .menu-item:hover {
 	transform: scale(1.05);
@@ -205,7 +229,7 @@ td > div {
 	}
 }
 
-/* HIDDEN ITEM DESCRIPTION TOGGLED BY JAVASCRIPT */
+/* HIDDEN ITEM DESCRIPTION TOGGLED BY JAVASCRIPT 
 
 .hidden-cust {
     background-color: beige;
@@ -247,18 +271,18 @@ p {
     flex-direction: column;
 }
 
-/* INNER HTML:
+INNER HTML:
 
 <div class="hidden-cust">
-        <h3>Customize ${itemName}</h3>
-        <div >
-            <p><img class="image" src="Restaurant/Images/india-flag-icon-cropped.png" srcset=""></p>
-        </div>
-        <h3><input type="checkbox" name="${}" id="${}"> cust 1</h3>
-        
-        <div>
-            <button class="buttons" type="button">Add To Cart</button>
-        </div>
-    </div>
+	<h3>Customize ${itemName}</h3>
+	<div >
+		<p><img class="image" src="${imagePath}" srcset=""></p>
+	</div>
+	<h3><input type="checkbox" name="${condName}" id="${condName}"> ${condName}</h3>
+	
+	<div>
+		<button class="buttons" type="button">Add To Cart</button>
+	</div>
+</div>
 
 */
