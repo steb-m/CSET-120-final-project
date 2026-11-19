@@ -229,7 +229,7 @@ td > div {
 	}
 }
 
-/* HIDDEN ITEM DESCRIPTION TOGGLED BY JAVASCRIPT 
+/* HIDDEN ITEM CUSTOMIZATION TOGGLED BY JAVASCRIPT 
 
 .hidden-cust {
     background-color: beige;
@@ -276,7 +276,7 @@ INNER HTML:
 <div class="hidden-cust">
 	<h3>Customize ${itemName}</h3>
 	<div >
-		<p><img class="image" src="${imagePath}" srcset=""></p>
+		<p><img class="image" src="${imagePath}"></p>
 	</div>
 	<h3><input type="checkbox" name="${condName}" id="${condName}"> ${condName}</h3>
 	
