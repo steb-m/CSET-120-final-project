@@ -21,7 +21,7 @@
 } body {
 	background-color: #370617;
 	color: #faa307;
-	font-family: sans-serif;
+	font-family: "Dosis", system-ui, sans-serif;
 } header {
 	animation: fadeSlideDown 800ms ease-out forwards;
 	background: linear-gradient(to bottom, #03071e, transparent);
@@ -41,10 +41,9 @@
 } #nav-links a {
 	color: #fff;
 	pointer-events: visibleFill;
-	transition: color 0.3s ease;
+	transition: color 300ms ease;
 } #nav-links a, #nav-links p {
 	background-color: #000000bf;
-	font-family: "Dosis", system-ui;
 	font-size: 1.2rem;
 	padding: 5px 10px;
 	position: relative;

@@ -2,8 +2,23 @@
 	from { opacity: 0; }
 	to { opacity: 1; }
 } #sort-fields {
-	display: flex;
-	justify-content: space-evenly;
+	font-size: 150%;
+	justify-self: center;
+	margin: 5px 0 20px 0;
+	width: auto;
+} #sort-fields span {
+	background-color: #0000007f;
+	border-left: 2px solid #d00000;
+	border-right: 2px solid #d00000;
+	padding: 5px 10px;
+} #sort-fields select {
+	background-color: #03071e;
+	border-color: goldenrod;
+	border-radius: 5px;
+	color: #f0f0f0;
+	font-family: inherit;
+	font-size: 80%;
+	margin-left: 5px;
 } menu {
 	display: grid;
 	gap: 1%;
@@ -11,7 +26,6 @@
 	margin: 4px 2%;
 } .menu-item {
 	animation: fadeIn 667ms;
-	background-color: unset;
 	background-position: top center;
 	background-size: cover;
 	border: 1px solid #fff;
