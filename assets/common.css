@@ -1,4 +1,20 @@
-* {
+@keyframes fadeSlideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-30px);
+	} to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+} @keyframes fadeSlideUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	} to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+} * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0
@@ -6,6 +22,58 @@
 	background-color: #370617;
 	color: #faa307;
 	font-family: sans-serif;
+} header {
+	animation: fadeSlideDown 800ms ease-out forwards;
+	background: linear-gradient(to bottom, #03071E, transparent);
+	color: #f0f0f0;
+	font-weight: 200;
+	padding: 20px 0;
+	pointer-events: none;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+} #nav-links {
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
+} #nav-links li {
+	margin: 0 10px;
+} #nav-links a {
+	color: #fff;
+	pointer-events: visibleFill;
+	transition: color 0.3s ease;
+} #nav-links a, #nav-links p {
+	background-color: #000000bf;
+	font-family: "Dosis", system-ui;
+	font-size: 1.2rem;
+	padding: 5px 10px;
+	position: relative;
+	text-decoration: none;
+} #nav-links a::after {
+	background-color: goldenrod;
+	bottom: 0;
+	content: '';
+	height: 2px;
+	left: 0;
+	position: absolute;
+	transition: width 300ms ease;
+	width: 0;
+} #nav-links a:hover {
+	color: goldenrod;
+} #nav-links a:hover::after {
+	width: 100%;
+} #nav-links p {
+	color: goldenrod;
+	margin-top: -5px;
 } h1 {
 	text-align: center;
+} footer {
+	background: linear-gradient(to top, #000000, transparent);
+	bottom: 0;
+	color: #D00000;
+	padding: 50px 0 25px 0;
+	pointer-events: none;
+	position: fixed;
+	text-align: center;
+	width: 100%;
 }
