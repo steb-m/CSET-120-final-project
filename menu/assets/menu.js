@@ -5,7 +5,8 @@ fetch("assets/menu.json").then(response => response.json()).then(data => {
 		itemInfoElem = document.createElement("div"),
 		itemTitleElem = document.createElement("h2"),
 		itemPriceElem = document.createElement("p");
-		menuItemElem.className = "menu-item", menuItemElem.style.backgroundImage = `linear-gradient(#00000000 60%, #000000df 80%), url("assets/img/${data.items[i].image}")`;
+		menuItemElem.className = `menu-item ${data.items[i].category}`;
+		menuItemElem.style.backgroundImage = `linear-gradient(#00000000 60%, #000000df 80%), url("assets/img/${data.items[i].image}")`;
 		itemInfoElem.className = "item-info";
 		itemTitleElem.className = "item-title", itemTitleElem.textContent = data.items[i].title;
 		itemPriceElem.className = "item-price", itemPriceElem.textContent = "$" + data.items[i].price.toFixed(2);
@@ -14,3 +15,10 @@ fetch("assets/menu.json").then(response => response.json()).then(data => {
 		menuTag.appendChild(menuItemElem);
 	}
 });
+const menuItemElems = menuTag.getElementsByClassName("menu-item"), showCategory = (category) => {
+	if (category === "all") for (const menuItemElem of menuItemElems) {
+		menuItemElem.style.display = "";
+	} else for (const menuItemElem of menuItemElems) {
+		menuItemElem.className.includes(category) ? menuItemElem.style.display = "" : menuItemElem.style.display = "none";
+	}
+}

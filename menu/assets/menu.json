@@ -4,67 +4,78 @@
 			"title": "Beef & Broccoli",
 			"price": 8.99,
 			"description": "This is a bowl of beef & broccoli.",
-			"image": "beefAndBroccoli.webp"
+			"image": "beefAndBroccoli.webp",
+			"category": "beef"
 		},
 		{
 			"title": "Beef Chow Fun",
 			"price": 7.99,
 			"description": "This is a bowl of beef chow fun.",
-			"image": "beefChowFun.webp"
+			"image": "beefChowFun.webp",
+			"category": "beef"
 		},
 		{
 			"title": "Beef Lo Mein",
 			"price": 9.99,
 			"description": "This is a bowl of beef lo mein.",
-			"image": "beefLoMein.jpg"
+			"image": "beefLoMein.jpg",
+			"category": "beef"
 		},
 		{
 			"title": "Char Siu Pork",
 			"price": 5.99,
 			"description": "This is a plate of char siu pork.",
-			"image": "charSiuPork.webp"
+			"image": "charSiuPork.webp",
+			"category": "pork"
 		},
 		{
 			"title": "Chicken Lo Mein",
 			"price": 6.99,
 			"description": "This is a bowl of chicken lo mein.",
-			"image": "chickenLoMein.jpg"
+			"image": "chickenLoMein.jpg",
+			"category": "chicken"
 		},
 		{
 			"title": "Fried Rice",
 			"price": 3.99,
 			"description": "This is a bowl of fried rice.",
-			"image": "friedRice.webp"
+			"image": "friedRice.webp",
+			"category": "rice"
 		},
 		{
 			"title": "Kung Pao Chicken",
 			"price": 7.49,
 			"description": "This is a plate of kung pao chicken.",
-			"image": "kungPaoChicken.webp"
+			"image": "kungPaoChicken.webp",
+			"category": "chicken"
 		},
 		{
 			"title": "Orange Chicken",
 			"price": 7.69,
 			"description": "This is a plate of orange chicken.",
-			"image": "orangeChicken.webp"
+			"image": "orangeChicken.webp",
+			"category": "chicken"
 		},
 		{
 			"title": "Pork Dumplings",
 			"price": 5.79,
 			"description": "This is a plate of pork dumplings.",
-			"image": "porkDumpling.webp"
+			"image": "porkDumpling.webp",
+			"category": "pork"
 		},
 		{
 			"title": "Shrimp Lo Mein",
 			"price": 8.49,
 			"description": "This is a bowl of shrimp lo mein.",
-			"image": "shrimpLoMein.webp"
+			"image": "shrimpLoMein.webp",
+			"category": "seafood"
 		},
 		{
 			"title": "Sour Soup",
 			"price": 4.69,
 			"description": "This is a bowl of sour soup.",
-			"image": "sourSoup.webp"
+			"image": "sourSoup.webp",
+			"category": "soup"
 		}
 	]
 }
