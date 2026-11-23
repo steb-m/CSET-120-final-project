@@ -37,13 +37,16 @@
 	overflow: hidden;
 	position: relative;
 	transition: scale 333.333ms;
-} .menu-item:hover {
+} .menu-item:hover, .menu-cart-button:hover {
 	cursor: pointer;
 	scale: 105%;
 	transition: scale 333.333ms;
 } .menu-item:hover > .item-info {
 	bottom: 0;
 	transition: bottom 333.333ms;
+} .menu-item:hover > .menu-cart-button {
+	opacity: 1;
+	transition: opacity 333.333ms;
 } .item-info {
 	bottom: -34px;
 	max-height: 128px;
@@ -56,4 +59,13 @@
 	font-size: 250%;
 } .item-price {
 	font-size: 175%;
+} .menu-cart-button {
+	border-radius: 12px;
+	font-size: 150%;
+	opacity: 0;
+	padding: 4px;
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	transition: opacity 333.333ms, scale 333.333ms;
 }
