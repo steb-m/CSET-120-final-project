@@ -37,16 +37,19 @@
 	overflow: hidden;
 	position: relative;
 	transition: scale 333.333ms;
-} .menu-item:hover, .menu-cart-button:hover {
+} .menu-item:hover, .menu-item:hover > .menu-cart-button:hover {
 	cursor: pointer;
 	scale: 105%;
-	transition: scale 333.333ms;
+	transition: opacity 333.333ms, scale 333.333ms;
 } .menu-item:hover > .item-info {
 	bottom: 0;
 	transition: bottom 333.333ms;
 } .menu-item:hover > .menu-cart-button {
 	opacity: 1;
-	transition: opacity 333.333ms;
+	transition: opacity 333.333ms, scale 333.333ms;
+} .menu-item:hover > .menu-cart-button:active {
+	scale: 95%;
+	transition: scale 111.111ms;
 } .item-info {
 	bottom: -34px;
 	max-height: 128px;
@@ -60,10 +63,14 @@
 } .item-price {
 	font-size: 175%;
 } .menu-cart-button {
-	border-radius: 12px;
+	background-color: #ffca4b;
+	border-color: #000;
+	border-radius: 50px;
+	border-style: solid;
+	color: #03071e;
 	font-size: 150%;
 	opacity: 0;
-	padding: 4px;
+	padding: 12px 28px;
 	position: absolute;
 	right: 8px;
 	top: 8px;
