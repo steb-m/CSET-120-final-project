@@ -1,9 +1,4 @@
 const menuTag = document.getElementsByTagName("menu")[0];
-try { // If cart cookie not present, set cart to empty arr
-	var cart = localStorage.getItem("cart").split(",");
-} catch {
-	var cart = [];
-}
 fetch("assets/menu.json").then(response => response.json()).then(data => {
 	for (let i = 0; i < data.items.length; i++) {
 		const menuItemElem = document.createElement("button"),
@@ -35,7 +30,7 @@ const menuItemElems = menuTag.getElementsByClassName("menu-item"), showCategory 
 	} else for (const menuItemElem of menuItemElems) {
 		menuItemElem.className.includes(category) ? menuItemElem.style.display = "" : menuItemElem.style.display = "none";
 	}
-}, cartElem = document.getElementById("cart"), updateCart = () => {
+}, updateCart = () => {
 	if (cart.length === 0) {
 		localStorage.removeItem("cart");
 		cartElem.textContent = "Checkout";
@@ -54,6 +49,3 @@ const menuItemElems = menuTag.getElementsByClassName("menu-item"), showCategory 
 	button.setAttribute("onclick", "addToCart(this);");
 	button.textContent = "Add to Cart";
 }
-if (cart.length === 0) cartElem.textContent = "Checkout";
-else cartElem.textContent = `Checkout (${cart.length})`;
-console.log(cart);
