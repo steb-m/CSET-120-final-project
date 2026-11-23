@@ -1,6 +1,9 @@
-const menuTag = document.getElementsByTagName("menu")[0], cartCookie = localStorage.getItem("cart").split(",");
-if (cartCookie) var cart = cartCookie;
-else var cart = [];
+const menuTag = document.getElementsByTagName("menu")[0];
+try { // If cart cookie not present, set cart to empty arr
+	var cart = localStorage.getItem("cart").split(",");
+} catch {
+	var cart = [];
+}
 fetch("assets/menu.json").then(response => response.json()).then(data => {
 	for (let i = 0; i < data.items.length; i++) {
 		const menuItemElem = document.createElement("button"),
