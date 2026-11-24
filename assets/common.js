@@ -1,5 +1,5 @@
 const cartElem = document.getElementById("cart");
-try { // If cart cookie not present, set cart to empty arr
+try { // If cart data not present, set cart to empty arr
 	var cart = localStorage.getItem("cart").split(",");
 } catch {
 	var cart = [];

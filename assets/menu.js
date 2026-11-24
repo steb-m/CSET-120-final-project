@@ -1,4 +1,5 @@
 const menuTag = document.getElementsByTagName("menu")[0];
+console.log(cart);
 fetch("assets/menu.json").then(response => response.json()).then(data => {
 	for (let i = 0; i < data.items.length; i++) {
 		const menuItemElem = document.createElement("button"),
@@ -11,7 +12,7 @@ fetch("assets/menu.json").then(response => response.json()).then(data => {
 		itemInfoElem.className = "item-info";
 		itemTitleElem.className = "item-title", itemTitleElem.textContent = data.items[i].title;
 		itemPriceElem.className = "item-price", itemPriceElem.textContent = "$" + data.items[i].price.toFixed(2);
-		cartButton.className = `menu-cart-button`;
+		cartButton.className = "menu-cart-button";
 		if (cart.includes(itemTitleElem.textContent)) {
 			cartButton.textContent = "Remove from Cart";
 			cartButton.setAttribute("onclick", `removeFromCart(this);`);
@@ -44,7 +45,7 @@ const menuItemElems = menuTag.getElementsByClassName("menu-item"), showCategory 
 	button.setAttribute("onclick", "removeFromCart(this);");
 	button.textContent = "Remove from Cart";
 }, removeFromCart = (button) => {
-	cart.splice(cart.indexOf(button), 1);
+	cart.splice(cart.indexOf(button.parentNode.getElementsByClassName("item-title")[0].textContent), 1);
 	updateCart();
 	button.setAttribute("onclick", "addToCart(this);");
 	button.textContent = "Add to Cart";
