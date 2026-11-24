@@ -31,17 +31,25 @@ class UserProfile {
     }
 }
 
-let userProfiles = JSON.parse(localStorage.getItem("userProfiles"))
+const userProfiles = localStorage.getItem("userProfiles")
 let users = new Map()
 
-if (userProfiles instanceof Map) {
-    users = userProfiles
-    console.log("is a map")
-} else {
-    localStorage.setItem("userProfiles", JSON.stringify(users))
+if (userProfiles) {
+    let array = JSON.parse(userProfiles)
+    if (Array.isArray(array)) {
+        console.log(array)
+        array.forEach(([email, userProfile]) => {
+            let profile = new UserProfile(userProfile.email, userProfile.firstName, userProfile.lastName, userProfile.password, userProfile.admin)
+            users.set(email, profile)
+        })
+        users.set("gavinmartin@thegoldenfork.com", new UserProfile("gavinmartin@thegoldenfork.com", "Gavin", "Martin", "Password", true))
+        users.set("jackmaher@thegoldenfork.com", new UserProfile("jackmaher@thegoldenfork.com", "Jack", "Maher", "Password", true))
+        users.set("austinrabert@thegoldenfork.com", new UserProfile("austinrabert@thegoldenfork.com", "Austin", "Rabert", "Password", true))
+    }
 }
 
 function resetUserProfiles() {
+    // erm dont use doesnt work right i think
     users = new Map()
     users.set("gavinmartin@thegoldenfork.com", new UserProfile("gavinmartin@thegoldenfork.com", "Gavin", "Martin", "Password", true))
     users.set("jackmaher@thegoldenfork.com", new UserProfile("jackmaher@thegoldenfork.com", "Jack", "Maher", "Password", true))

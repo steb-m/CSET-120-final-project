@@ -10,6 +10,7 @@ let isAdminPage = false
 if (document.querySelector(".manager")) {
     isAdminPage = true
 }
+console.log(`Admin page is ${isAdminPage}`)
 
 let registering = false
 
@@ -22,6 +23,9 @@ function register() {
         message.innerHTML = "Password must be at least 8 characters long."
     } else {
         users.set(emailInput.value, new UserProfile(emailInput.value, firstNameInput.value, lastNameInput.value, passwordInput.value, false))
+        console.log(Array.from(users.entries()))
+        localStorage.setItem("userProfiles", JSON.stringify(Array.from(users.entries())))
+
         message.innerHTML = "Successfully created new user."
     }
 
@@ -30,20 +34,17 @@ function register() {
 function signIn() {
     if (!users.has(emailInput.value) || passwordInput.value != users.get(emailInput.value).getPassword() || users.get(emailInput.value).isAdmin() != isAdminPage) {
         message.innerHTML = "Username or password is incorrect."
-    } else if (users.get(emailInput.value).isAdmin()) {
-
     } else {
-        // localStorage.setItem("loginDetails", JSON.stringify(Array.from(logins.entries())))
-        // localStorage.setItem("currentUser", usernameInput.value)
         currentUser = users.get(emailInput.value)
-        localStorage.setItem("userProfiles", JSON.stringify(users))
         localStorage.setItem("currentUser", JSON.stringify(users.get(emailInput.value)))
         message.innerHTML = "Login successful!"
         window.location.href = "../index.html"
     }
+    console.log(users.get(emailInput.value).isAdmin())
 }
 console.log(users)
 signInButton.addEventListener("click", () => {
+    console.log("hi")
     if (registering) {
         registering = false
         firstNameInput.parentElement.hidden = true;
