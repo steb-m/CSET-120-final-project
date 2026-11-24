@@ -1,4 +1,3 @@
-
     const cards = document.querySelectorAll(".flexbox-item");
 
     const observerOptions = {

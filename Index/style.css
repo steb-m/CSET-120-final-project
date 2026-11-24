@@ -85,7 +85,7 @@ a.btn:hover {
     position: sticky;
     top: 0;
     z-index: 100;
-    animation: fadeSlideUp 0.8s ease-out forwards;
+    animation: fadeSlideDown 0.8s ease-out forwards;
 } 
 
 .nav-links {
@@ -242,4 +242,15 @@ div.images {
     background: linear-gradient(to top, #03071E, transparent);
     bottom: 0;
     pointer-events: none;
+}
+
+@keyframes fadeSlideDown {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
 }
