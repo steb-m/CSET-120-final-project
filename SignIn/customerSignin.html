@@ -5,25 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Golden Fork</title>
-    <link rel="stylesheet" href="signinStyle.css">
+    <link rel="stylesheet" href="signInStyle.css">
 </head>
 
 <body>
     <img src="../Images/TheGoldenFork.jpg" alt="The Golden Fork Logo" class="logo-image">
-    <h2 class="signin-heading">Sign in or create an account</h2>
-    <section class="signin-items">
-        <div class="input-format">
-            <input type="email" placeholder="Email" name="email-input" class="signin-input" id="email-input">
+    <h2 class="signIn-heading">Sign in or create an account</h2>
+    <section class="signIn-items">
+        <div class="input-format" hidden>
+            <input type="text" placeholder="First Name" name="first-name-input" class="signIn-input" id="customer-firstName-input">
+        </div>
+        <div class="input-format" hidden>
+            <input type="text" placeholder="Last Name" name="last-name-input" class="signIn-input" id="customer-lastName-input">
         </div>
         <div class="input-format">
-            <input type="password" placeholder="Password" name="password-input" class="signin-input" id="password-input">
+            <input type="text" placeholder="Email" name="email-input" class="signIn-input" id="customer-email-input">
         </div>
-        <div class="signin-buttons">
-            <button class="signin-button" >Sign In</button>
-            <button class="signin-button" onclick="onSubmit()">Register</button>
+        <div class="input-format">
+            <input type="password" placeholder="Password" name="password-input" class="signIn-input" id="customer-password-input">
+        </div>
+        <p class="signIn-message" id="customer-signIn-message">Sign In Message. You shouldn't be able to see this.</p>
+        <div class="signIn-buttons">
+            <button class="signIn-button" id="customer-signIn-button">Sign In</button>
+            <button class="signIn-button" id="customer-register-button">Register</button>
         </div>
     </section>
-    <script src="signinScript.js"></script>
+    <script src="../Scripts/userData.js"></script>
+    <script src="signInScript.js"></script>
 </body>
 
 </html>

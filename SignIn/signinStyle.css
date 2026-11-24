@@ -25,7 +25,7 @@ body.manager {
     border: solid 5px #161616;
 }
 
-.signin-heading {
+.signIn-heading {
     margin-top: 20px;
     display: flex;
     justify-self: center;
@@ -38,8 +38,7 @@ body.manager {
     background-color: rgba(23, 26, 33, 0.5);
 }
 
-.signin-items {
-    margin-top: 25px;
+.signIn-items {
     display: flex;
     justify-self: center;
     flex-direction: column;
@@ -47,10 +46,19 @@ body.manager {
 }
 
 .input-format {
-    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
-.signin-input {
+.signIn-message {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    /* visibility: hidden; */
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.signIn-input {
     width: 400px;
     height: 50px;
     border-radius: 20px;
@@ -60,12 +68,12 @@ body.manager {
     background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, .3));
 }
 
-.signin-buttons {
+.signIn-buttons {
     display: flex;
     justify-content: space-evenly;
 }
 
-.signin-button {
+.signIn-button {
     width: 40%;
     height: 50px;
     border: none;
@@ -77,6 +85,6 @@ body.manager {
     cursor: pointer;
 }
 
-.signin-button:active {
+.signIn-button:active {
     background-color: #6A040F;
 }
