@@ -82,6 +82,7 @@ body.manager {
     background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, .4));
     color: white;
     background-color: #9D0208;
+    cursor: pointer;
 }
 
 .signIn-button:active {

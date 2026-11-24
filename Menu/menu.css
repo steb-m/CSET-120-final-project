@@ -24,7 +24,7 @@ body {
 @keyframes fadeSlideDown {
 	from {
 		opacity: 0;
-		transform: translateY(-10px);
+		transform: translateY(-15px);
 	}
 	to {
 		opacity: 1;
@@ -39,7 +39,7 @@ body {
 	}
 	to {
 		opacity: 1;
-		transform: translateY(-10px);
+		transform: translateY(-15px);
 	}
 }
 
@@ -99,6 +99,7 @@ table {
 	border-collapse: separate;
 	border-spacing: 24px;
 	table-layout: fixed;
+	animation: fadeSlideUp 0.5s ease-out forwards;
 }
 
 td {
@@ -139,8 +140,6 @@ td > div {
 	padding: 0;
 	position: relative;
 	overflow: hidden;
-	transition: transform 0.33s ease;
-	
 }
 
 
@@ -229,7 +228,7 @@ td > div {
 	}
 }
 
-/* HIDDEN ITEM DESCRIPTION TOGGLED BY JAVASCRIPT 
+/* HIDDEN ITEM CUSTOMIZATION TOGGLED BY JAVASCRIPT 
 
 .hidden-cust {
     background-color: beige;
@@ -276,7 +275,7 @@ INNER HTML:
 <div class="hidden-cust">
 	<h3>Customize ${itemName}</h3>
 	<div >
-		<p><img class="image" src="${imagePath}" srcset=""></p>
+		<p><img class="image" src="${imagePath}"></p>
 	</div>
 	<h3><input type="checkbox" name="${condName}" id="${condName}"> ${condName}</h3>
 	
