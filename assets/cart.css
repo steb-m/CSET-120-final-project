@@ -8,6 +8,7 @@
 } .cart-item {
 	border-bottom: 1px solid #fff;
 	height: 64px;
+	overflow: hidden;
 } .item-container, .details-container {
 	align-items: center;
 	display: inline-flex;

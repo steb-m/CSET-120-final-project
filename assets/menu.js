@@ -30,14 +30,6 @@ const menuItemElems = menuTag.getElementsByClassName("menu-item"), showCategory 
 	} else for (const menuItemElem of menuItemElems) {
 		menuItemElem.className.includes(category) ? menuItemElem.style.display = "" : menuItemElem.style.display = "none";
 	}
-}, updateCart = () => {
-	if (cart.length === 0) {
-		localStorage.removeItem("cart");
-		cartElem.textContent = "Checkout";
-	} else {
-		localStorage.setItem("cart", cart);
-		cartElem.textContent = `Checkout (${cart.length})`;
-	}
 }, addToCart = (button) => {
 	cart.push(button.parentNode.getElementsByClassName("item-title")[0].textContent);
 	updateCart();
