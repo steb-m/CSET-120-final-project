@@ -6,6 +6,7 @@
 	margin: 4px 2%;
 	overflow: hidden;
 } .cart-item {
+	border-bottom: 1px solid #fff;
 	height: 64px;
 } .item-container, .details-container {
 	align-items: center;

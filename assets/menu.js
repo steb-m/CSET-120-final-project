@@ -10,7 +10,7 @@ fetch("assets/menu.json").then(response => response.json()).then(data => {
 		menuItemElem.style.backgroundImage = `linear-gradient(#00000000 60%, #000000df 80%), url("assets/img/${data.items[i].image}")`;
 		itemInfoElem.className = "item-info";
 		itemTitleElem.className = "item-title", itemTitleElem.textContent = data.items[i].title;
-		itemPriceElem.className = "item-price", itemPriceElem.textContent = "$" + data.items[i].price.toFixed(2);
+		itemPriceElem.className = "item-price", itemPriceElem.textContent = `$${data.items[i].price.toFixed(2)}`;
 		cartButton.className = "menu-cart-button";
 		if (cart.includes(itemTitleElem.textContent)) {
 			cartButton.textContent = "Remove from Cart";
