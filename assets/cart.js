@@ -1,4 +1,8 @@
-const checkoutCart = document.getElementById("checkout-cart");
+const checkoutCart = document.getElementById("checkout-cart"), removeFromCart = (item) => {
+	cart.splice(cart.indexOf(item.getElementsByClassName("item-title")[0].textContent), 1);
+	updateCart();
+	item.remove();
+}
 if (cart.length > 0) fetch("assets/menu.json").then(response => response.json()).then(data => {
 	for (const cartItemTitle of cart) {
 		const cartItem = data.items.find(item => item.title === cartItemTitle),
@@ -15,20 +19,16 @@ if (cart.length > 0) fetch("assets/menu.json").then(response => response.json())
 		detailsContainer.className = "details-container";
 		itemImgElem.src = `assets/img/${cartItem.image}`;
 		itemTitleElem.className = "item-title", itemTitleElem.textContent = cartItemTitle;
-		itemPriceElem.className = "item-price", itemPriceElem.textContent = `$${cartItem.price.toFixed(2)}`;
-		quantitySelect.className = "quantity-select", quantitySelect.type = "number", quantitySelect.value = 1;
+		itemPriceElem.className = "item-price";
+		itemPriceElem.textContent = `$${cartItem.price.toFixed(2)}`;
+		quantitySelect.className = "quantity-select", quantitySelect.type = "number";
+		quantitySelect.value = 1;
 		removeButton.className = "remove-button", removeButton.textContent = "Remove";
-		removeButton.setAttribute("onclick", "removeFromCart(this);")
+		removeButton.setAttribute("onclick", "removeFromCart(this.parentNode.parentNode);")
 		itemContainer.appendChild(itemImgElem), itemContainer.appendChild(itemTitleElem);
-		detailsContainer.appendChild(itemPriceElem), detailsContainer.appendChild(quantitySelect), detailsContainer.appendChild(removeButton);
+		detailsContainer.appendChild(itemPriceElem), detailsContainer.appendChild(quantitySelect);
+		detailsContainer.appendChild(removeButton);
 		cartItemElem.appendChild(itemContainer), cartItemElem.appendChild(detailsContainer);
 		checkoutCart.appendChild(cartItemElem);
 	}
 });
-const removeFromCart = (button) => {
-	const cartItemElem = button.parentNode.parentNode;
-	console.log(cartItemElem);
-	cart.splice(cart.indexOf(cartItemElem.getElementsByClassName("item-title")[0].textContent), 1);
-	updateCart();
-	cartItemElem.remove();
-}
